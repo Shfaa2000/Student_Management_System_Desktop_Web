@@ -36,7 +36,7 @@ def file():
 
     put_html('<h1 style="color:white; background-color: black; text-align: center; border-radius: 10px; padding: 20px 10px;">الملف التعريفي للطالب</h1>')
     put_text("تطبيق ويب لتصدير السير الذاتية للطلاب المؤهلين للدراسة لدينا").style("text-align:center;")
-    with open('C:/Users/pc/Students_Management_sqlalchmy_pywebio/students.jpg', 'rb') as file:
+    with open('students.jpg', 'rb') as file:
         image_data = file.read()
     put_image(image_data, height='200px', width='300px').style("display: block; margin: 0 auto;")
     data = input_group(
@@ -93,5 +93,6 @@ def show_students_secure():
     put_html("<h2 style='text-align:center;'>📋 قائمة الطلاب</h2>")
     put_table(table_data).style("width:100%; text-align:center;")
 start_server(file, port=3000, debug=True)
+
 
 # عرض قاعدة البيانات على صفحة الويب ولكن لا تعرض الا للمشرفين والاداريين عن طريق كلمة سر
